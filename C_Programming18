@@ -1,0 +1,28 @@
+#include <stdio.h>
+int main()
+{
+    int n, ones, tens, i, c1 = 0, c2 = 0;
+    printf("Enter a number: ");
+    scanf("%d", &n);
+    ones = n % 10;
+    tens = (n / 10) % 10;
+    i = 1;
+    while(i <= ones)
+    {
+        if(ones % i == 0)
+            c1++;
+        i++;
+    }
+    i = 1;
+    while(i <= tens)
+    {
+        if(tens % i == 0)
+            c2++;
+        i++;
+    }
+    if(c1 == 2 && c2 == 2)
+        printf("Ones and Tens digits are Prime");
+    else
+        printf("Ones and Tens digits are Not Prime");
+    return 0;
+}
