@@ -1,0 +1,27 @@
+#include <stdio.h>
+int main()
+{
+    int n, temp, sum = 0, i = 2, prime = 1;
+    printf("Enter a number: ");
+    scanf("%d", &n);
+    temp = n;
+    while (temp != 0)
+    {
+        sum = sum + temp % 10;
+        temp = temp / 10;
+    }
+    while (i < n)
+    {
+        if (n % i == 0)
+        {
+            prime = 0;
+            break;
+        }
+        i++;
+    }
+    if (prime == 1 && sum == 14 && n > 1)
+        printf("Prime number and sum of digits is 14");
+    else
+        printf("Condition not satisfied");
+    return 0;
+}
