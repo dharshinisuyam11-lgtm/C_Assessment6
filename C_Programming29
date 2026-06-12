@@ -1,0 +1,17 @@
+#include <stdio.h>
+int main()
+{
+    int a, b, c, n;
+    scanf("%d%d%d", &a, &b, &c);
+    n = 1;
+    while(1)
+    {
+        if(n % a == 0 && n % b == 0 && n % c == 0)
+        {
+            printf("%d", n);
+            break;
+        }
+        n++;
+    }
+    return 0;
+}
